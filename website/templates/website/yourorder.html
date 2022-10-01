@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="yourorder.css">
+    
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+   <title>DoiNk Shippers</title>
+
+   <!-- Font -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@800&display=swap" rel="stylesheet">
+
+
+   <title>Enzo</title>
+   <script>
+    //using a polyfill for safary to have smooth scroling behavior. for more info: https://github.com/iamdustan/smoothscroll
+// using jQuery
+
+var activeImage = 0;
+var allimages = $(".img");
+var allImagesPossitionLefts = [];
+
+calcScrollPositionsForWindowScroll();
+
+$(document).ready(function () {
+$("#container").on("scroll", function () { // on scroll check active image
+  CheckForNewActiveImageBasedOnScroll();
+});
+$(window).on("resize", function () { // on resize recalculate scroll possitions
+  calcScrollPositionsForWindowScroll();
+});
+});
+
+function calcScrollPositionsForWindowScroll() {
+allImagesPossitionLefts = [];
+$(".img").each(function () {
+  var scrollPossition =
+    $(this).position().left - ($(window).width() - $(this).width()) / 2;
+  if (scrollPossition < 0) {
+    scrollPossition = 0;
+  } else if (scrollPossition > $("#wrapper").width()) {
+    scrollPossition = $("#wrapper").width() - 100;
+  }
+  allImagesPossitionLefts.push(scrollPossition);
+});
+// console.log(allImagesPossitionLefts);
+}
+
+// --- 3 exemples of valid function calls to move carousel ---
+// activateImage(8);
+// activateImage(undefined, true);
+// activateImage(undefined, false, true);
+
+function activateImage(imgNbr, next, previous) {
+var scrollTime = 400; // time it takes to mae the scroll
+if (next) { 
+  activeImage++; // acrtivate the next img
+
+  if (activeImage > allImagesPossitionLefts.length - 1) { //if the next img is after the last one
+    activeImage = 0; // select first image
+  }
+
+  $("#container").animate(
+    { scrollLeft: allImagesPossitionLefts[activeImage], behavior: "smooth" },
+    scrollTime
+  );
+} else if (previous) {
+  activeImage--;
+
+  if (activeImage < 0) {
+    activeImage = allImagesPossitionLefts.length - 1;
+  }
+
+  $("#container").animate(
+    { scrollLeft: allImagesPossitionLefts[activeImage], behavior: "smooth" },
+    scrollTime
+  );
+} else {
+  activeImage = imgNbr;
+
+  if (activeImage > allImagesPossitionLefts.length - 1) {
+    activeImage = 0;
+  } else if (activeImage < 0) {
+    activeImage = allImagesPossitionLefts.length - 1;
+  }
+
+  $("#container").animate(
+    { scrollLeft: allImagesPossitionLefts[activeImage], behavior: "smooth" },
+    scrollTime
+  );
+}
+}
+
+function CheckForNewActiveImageBasedOnScroll() {
+// determin new active image based on scroll position
+var scrollPosition = $("#container").scrollLeft();
+for (i in allImagesPossitionLefts) {
+  // see for all images if it is within range of being active
+  if (
+    // if scroll postiono of window is within 25 of scroll position of img
+    allImagesPossitionLefts[i] < scrollPosition + 25 &&
+    allImagesPossitionLefts[i] > scrollPosition - 25
+  ) {
+    activeImage = i; // if true activate that image
+    console.log("New active image: " + i);
+  }
+}
+if (
+  scrollPosition >
+  allImagesPossitionLefts[allImagesPossitionLefts.length - 2] + 200 // compage scrolle to befor last possition plus some room for error, 200 here
+) {
+  activeImage = allImagesPossitionLefts.length - 1; // activate last
+  console.log("New active image: " + i);
+}
+}
+ </script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+          <a class="navbar-brand" href="#" style="font-family: 'Roboto Slab', serif;">DoiNk Shippers</a>
+          
+        
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+    
+              <li class="nav-item">
+                <a class="nav-link" href="#">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Signup</a>
+              </li>
+    
+    
+            </ul>
+          </div>
+        </nav><br><br>
+
+
+        <section class="ordersummary">
+            <div class="ordersumm">
+                <h3 class="pagetitle">Your order summary</h3>
+                <a href="enzo.html">
+                    <div class="card mb-3 outlet-cards" style="max-width: 540px;">
+                       <div class="row no-gutters full-store-card">
+                         
+                         <div class="col-8">
+                           <div class="card-body">
+                             <h5 class="card-title">Chicken briyani</h5>
+                             <p class="card-text"><small class="text-muted">Rs 200</small></p>
+                             <!-- <p class="card-text">this mens block store has a variety of items including daily use products.</p> -->
+                             <p class="card-text"><small class="text-muted">Non-veg</small></p>
+                             
+                           </div>
+                         </div>
+                         <div class="col-4 store-image-space">
+                            <div>
+                            <img src="./Yellow Black Modern Food Instagram Story.png" class="card-img" alt="...">
+                        </div>
+                          </div>
+                       </div>
+                     </div>
+                    </a>
+            </div><br><br>
+
+            <div class="billing-details">
+                <h5 class="billtitle">Bill Details</h5>
+                <div class="card mb-3 outlet-cards" style="max-width: 540px;">
+                    <div class="row no-gutters full-store-card">
+                      
+                      <div class="col-8">
+                        <div class="card-body">
+                          <h5 class="card-title">Item total</h5>
+                          
+                          <p>Chickenn Briyani x 2</p>
+                          <p class="card-text"><small>Rs 400</small></p>
+                          <!-- <p class="card-text">this mens block store has a variety of items including daily use products.</p> -->
+                          <p class="card-text"><small class="text-muted">Non-veg</small></p>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </section>
+        <footer >
+            <a href="payment.html">
+            <button type=submit class="bn54">
+                <span class="bn54span">Proceed to payment</span>
+            </button>
+            </a>
+        </footer>
+</body>
+</html>
