@@ -7,7 +7,8 @@
 
    
    <link rel="stylesheet" href="style.css">
-   <link rel="stylesheet" href="signup.css">
+   <script src="./script.js"></script>
+   <script src="home.js"></script>
    <!-- Style & Script for Bootstrap 4.3 -->
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -21,218 +22,97 @@
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@800&display=swap" rel="stylesheet">
 
-  <!-- Style.css -->
-   <style>
+<!-- style.css -->
+  <style>
     body{
-   background-color:black !important;
-   height: 100%;
-   color: white !important;
+  background-color:black !important;
+  height: 100%;
+  color: white !important;
 }
 .navbar{
-  position: sticky !important;
-  background-color: rgba(0, 0, 0, 0.75) !important;
-  top: 0;
-  z-index: 50;
+ position: sticky !important;
+ background-color: rgba(0, 0, 0, 0.75) !important;
+ top: 0;
+ z-index: 50;
 }
 .carouselSection {
-   display: flex;
-   justify-content: center;
- }
- 
-  .container {
-   width: 100vw;
-   overflow-x: scroll;
-   scroll-behavior: smooth;
-   overflow-y: hidden;
-   scroll-snap-type: x mandatory;
- } 
- 
- .wrapper {
-   width: max-content;
-/*    height: 95vh;
- */   display: flex;
-   align-items: center;
- }
- 
- .img {
-   margin: 10px;
-   border-radius: 8px;
-   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
-   max-width: 80vw;
-   /*   float: left; */
-   scroll-snap-align: center;
- /*   scroll-snap-stop: normal; */
- }
+  display: flex;
+  justify-content: center;
+}
 
- .outlet-cards{
-   background-color: rgb(45, 45, 45) !important;
-   border-radius: 20px;
-   margin: 5px 15px;
- }
+ .container {
+  width: 100vw;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+} 
+
+.wrapper {
+  width: max-content;
+/*    height: 95vh;
+*/   display: flex;
+  align-items: center;
+}
+
+.img {
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+  max-width: 80vw;
+  /*   float: left; */
+  scroll-snap-align: center;
+/*   scroll-snap-stop: normal; */
+}
+
+.outlet-cards{
+  background-color: rgb(45, 45, 45) !important;
+  border-radius: 20px;
+  margin: 5px 15px;
+}
 
 .store-image-space{
-  /*  height: 100% !important; */
-   object-fit: fill !important;
+ /*  height: 100% !important; */
+  object-fit: fill !important;
 }
 .card-img{
-   border-radius: 20px;
-   height: 100%;
+  border-radius: 20px;
+  height: 100%;
 }
 
 .font-class{
-   margin: 15px 15px;
+  margin: 15px 15px;
 }
 
 .offers-carousel::-webkit-scrollbar {
-   display: none;
+  display: none;
 }
 
 a{
-   color: white !important;
+  color: white !important;
 }
 a:link {
-   text-decoration: none !important;
- }
- 
- a:visited {
-   text-decoration: none!important;
- }
- 
- a:hover {
-   text-decoration: none !important;
- }
- 
- a:active {
-   text-decoration: none !important;
- }
-  </style>
-<!-- signup.css -->
-<style>
-.lbr{
-    height: 900px;
-    width:80%;
-    z-index: 10;
-    background-color: #303030;
-    margin-left: 10%; 
-    margin-top: 50px;
-    /* border-radius: 25px; */
-    margin-bottom: 100px;
-    border: 5px solid transparent;
-    border-image: linear-gradient(to bottom right, #d99543 0%, #5F3519 100%);
-    border-image-slice: 1;
-}
-h3{
-    color: #fff;
-    padding-top: 20px;
-    padding-left: 11%;
-
-}
-.container1,.container3, .container4{
-    margin-left: 22%;
-}
-.container2{
-    font-weight: 200;
-    font-size: small;
-    margin-left: 20%;
+  text-decoration: none !important;
 }
 
-.container2-1{
-    margin-left: 7px;
+a:visited {
+  text-decoration: none!important;
 }
-input,select{
-    border-radius: 10px;
-    padding:2px 0px 2px 0px;
+
+a:hover {
+  text-decoration: none !important;
 }
-::placeholder{
-    padding-left: 10px;
-    font-weight: 100;
-    font-size: small;
+
+a:active {
+  text-decoration: none !important;
 }
-label{
-    font-weight: 200;
-    padding-bottom: 0cm;
-    padding-top: 5px;
-}
-.bn54 {
-    position: relative;
-    outline: none;
-    text-decoration: none;
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    text-transform: uppercase;
-    height: 45px;
-    width: 130px;
-    opacity: 1;
-    background-color:  #000000;
-    border: 2px solid transparent;
-    margin-left: 10%;
-    /* border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
-    border-image-slice: 1; */
-    border-image: linear-gradient(to bottom right, #d99543 0%, #5F3519 100%);
-    border-image-slice: 1;
-  }
-  
-  .bn54 .bn54span {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #fff;
-    font-size: 12px;
-    font-weight: 500;
-    letter-spacing: 0.7px;
-  }
-  
-  .bn54:hover {
-    animation: bn54rotate 0.7s ease-in-out both;
-  }
-  
-  .bn54:hover .bn54span {
-    animation: bn54storm 0.7s ease-in-out both;
-    animation-delay: 0.06s;
-  }
-  
-  @keyframes bn54rotate {
-    0% {
-      transform: rotate(0deg) translate3d(0, 0, 0);
-    }
-    25% {
-      transform: rotate(3deg) translate3d(0, 0, 0);
-    }
-    50% {
-      transform: rotate(-3deg) translate3d(0, 0, 0);
-    }
-    75% {
-      transform: rotate(1deg) translate3d(0, 0, 0);
-    }
-    100% {
-      transform: rotate(0deg) translate3d(0, 0, 0);
-    }
-  }
-  
-  @keyframes bn54storm {
-    0% {
-      transform: translate3d(0, 0, 0) translateZ(0);
-    }
-    25% {
-      transform: translate3d(4px, 0, 0) translateZ(0);
-    }
-    50% {
-      transform: translate3d(-3px, 0, 0) translateZ(0);
-    }
-    75% {
-      transform: translate3d(2px, 0, 0) translateZ(0);
-    }
-    100% {
-      transform: translate3d(0, 0, 0) translateZ(0);
-    }
-  }
-  
+
   </style>
-<script>
-  //using a polyfill for safary to have smooth scroling behavior. for more info: https://github.com/iamdustan/smoothscroll
+   <script>
+      //using a polyfill for safary to have smooth scroling behavior. for more info: https://github.com/iamdustan/smoothscroll
 // using jQuery
-  var activeImage = 0;
+
+var activeImage = 0;
 var allimages = $(".img");
 var allImagesPossitionLefts = [];
 
@@ -335,25 +215,23 @@ function CheckForNewActiveImageBasedOnScroll() {
    
    <!-- NavBar -->
    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
-     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-       <span class="navbar-toggler-icon"></span>
-      </button>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
       <a class="navbar-brand" href="#" style="font-family: 'Roboto Slab', serif;">DoiNk Shippers</a>
+    
     
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
 
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Main Page</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="login.html">Login</a>
-            </li>
-
+          <li class="nav-item">
+            <a class="nav-link" href="yourorder.html">Your Orders</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"></a>
         </ul>
       </div>
     </nav>
-   
    
    <!-- Section-->
    <!-- <section>
@@ -402,10 +280,10 @@ function CheckForNewActiveImageBasedOnScroll() {
 
 
 
-   <!-- <h1 class="font-class" style="font-family: 'Roboto Slab', serif;">
+   <h1 class="font-class" style="font-family: 'Roboto Slab', serif;">
       Order food to your door.
-   </h1> -->
-<!-- <section class="carouselSection">
+   </h1>
+<section class="carouselSection">
    <div class="container offers-carousel" id="container">
      <div class="wrapper" id="wrapper">
        <img class="img" id="img0" src="./frontcover.jpeg" alt="">
@@ -418,73 +296,17 @@ function CheckForNewActiveImageBasedOnScroll() {
    </div>
 
 
- </section> -->
+ </section>
 
-<section id="login">
-    <div class="lbr">
-        <div class="lname">
-            <h3>Sign up to Continue!</h3>
-            <form action="index.html">
-                <br>
-                <div class="container1">
-                <label for="name"> Full Name:</label><br>
-                <input type="text" Full Name="name" placeholder="Full Name" required><br>
-                <label for="regno">Registration No:</label><br>
-                <input type="text" Registration No="regno" placeholder="Eg: 20BXY0000" required><br>
-                <label for="pass">Password:</label><br>
-                <input type="password" Password="pass" placeholder="password" required><br>
-                <label for="No">Phone No:</label><br>
-                <input type="number" Phone No:="No" placeholder="Eg: 999999XXXX" pattern="[0-9]{10}" ><br>
 
-                <label for="email">College Mail:</label><br>
-                <input type="email" name="email" placeholder="xyz@vitstudent.ac.in" required><br>
-                <!-- <label for="dob">Date of Birth</label><br>
-                <input type="date" DOB="dob"><br> -->
-                <label for="gen">Gender:</label><br>
-                <select name="gen" >
-                    <option value="d" selected disabled style="font-weight: 200;">
-                        <b>Choose an option</b>
-                    </option>
-                    <option value="m">Male</option>
-                    <option value="f">Female</option>
-                    <option value="o">Other</option>
-                </select><br>
-                <label for="blk"> Block: </label><br>
-                <input type="text" Block="blk" placeholder="Eg: L" pattern="[A-Z]{1}"><br>
-                <label for="anx">Annex?:</label><br>
-                <select name="anx">
-                    <option value="d" selected disabled style="font-weight: 200;">
-                        <b>Choose Yes or No </b>
-                    </option>
-                    <option value="y">Yes</option>
-                    <option value="n">No</option>
-                </select><br>
-                <label for="rno">Room No:</label><br>
-                <input type="number" Room No:="No" placeholder="Eg: 10XX" patterns="[0-9]{1-4}"><br>
-                </div>
-                <div class="container2">
-                    <br>
-                    <input type="checkbox" name="terms" required>
-                    <label>I agree to the terms and conditions</label><br><br>
-                    </div>
-                <div class="container3">
-                    <button type=submit class="bn54">
-                        <span class="bn54span">Sign Up</span>
-                    </button>
-                </div>
-            </form>
-            
-        </div>
-    </div>
-</section>
 <!-- restaurant page -->
-<!-- <h3 class="font-class" >{no}Restaurants to explore</h3>
+<h3 class="font-class" >{no}Restaurants to explore</h3>
 
 <a href="enzo.html">
 <div class="card mb-3 outlet-cards" style="max-width: 540px;">
    <div class="row no-gutters full-store-card">
      <div class="col-4 store-image-space">
-       <img src="./storeimage.png" class="card-img" alt="...">
+       <img src="Yellow Black Modern Food Instagram Story.png" class="card-img" alt="...">
      </div>
      <div class="col-8">
        <div class="card-body">
@@ -495,11 +317,27 @@ function CheckForNewActiveImageBasedOnScroll() {
      </div>
    </div>
  </div>
-</a>
+ <a href="enzo.html">
+    <div class="card mb-3 outlet-cards" style="max-width: 540px;">
+     <div class="row no-gutters full-store-card">
+       <div class="col-4 store-image-space">
+         <img src="Arasan.png" class="card-img" alt="...">
+       </div>
+       <div class="col-8">
+         <div class="card-body">
+           <h5 class="card-title"> Arasan Restaurent</h5>
+           <p class="card-text">This Restaurent in SJT has many crazy items which you can Try On !</p>
+           <p class="card-text"><small class="text-muted">Restaurent</small></p>
+         </div>
+       </div>
+     </div>
+   </div>
+   </a>
+ <a href="enzo.html">
  <div class="card mb-3 outlet-cards" style="max-width: 540px;">
    <div class="row no-gutters full-store-card">
      <div class="col-4 store-image-space">
-       <img src="./storeimage.png" class="card-img" alt="...">
+       <img src="Yellow Black Modern Food Instagram Story.png" class="card-img" alt="...">
      </div>
      <div class="col-8">
        <div class="card-body">
@@ -510,22 +348,6 @@ function CheckForNewActiveImageBasedOnScroll() {
      </div>
    </div>
  </div>
- <div class="card mb-3 outlet-cards" style="max-width: 540px;">
-   <div class="row no-gutters full-store-card">
-     <div class="col-4 store-image-space">
-       <img src="./storeimage.png" class="card-img" alt="...">
-     </div>
-     <div class="col-8">
-       <div class="card-body">
-         <h5 class="card-title"> Enzo Store</h5>
-         <p class="card-text">this mens block store has a variety of items including daily use products.</p>
-         <p class="card-text"><small class="text-muted">Grocery</small></p>
-       </div>
-     </div>
-   </div>
- </div> -->
- 
+  </a>
 </body>
-
-<script src="./script.js"></script>
 </html>
