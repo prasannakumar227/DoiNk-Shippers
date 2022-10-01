@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent</title>
+    <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="signup.css">
+   <link rel="stylesheet" href="login.css">
+   <!-- Style & Script for Bootstrap 4.3 -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+   <!-- style.css -->
+   <style>
+    body{
+  background-color:black !important;
+  height: 100%;
+  color: white !important;
+}
+.navbar{
+  position: sticky !important;
+  background-color: rgba(0, 0, 0, 0.75) !important;
+  top: 0;
+  z-index: 50;
+}
+.carouselSection {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 100vw;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+} 
+
+.wrapper {
+  width: max-content;
+  /*    height: 95vh;
+  */   display: flex;
+  align-items: center;
+}
+
+.img {
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+  max-width: 80vw;
+  /*   float: left; */
+  scroll-snap-align: center;
+  /*   scroll-snap-stop: normal; */
+}
+
+.outlet-cards{
+  background-color: rgb(45, 45, 45) !important;
+  border-radius: 20px;
+  margin: 5px 15px;
+}
+
+.store-image-space{
+  /*  height: 100% !important; */
+  object-fit: fill !important;
+}
+.card-img{
+  border-radius: 20px;
+  height: 100%;
+}
+
+.font-class{
+  margin: 15px 15px;
+}
+
+.offers-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+a{
+  color: white !important;
+}
+a:link {
+  text-decoration: none !important;
+}
+
+a:visited {
+  text-decoration: none!important;
+}
+
+a:hover {
+  text-decoration: none !important;
+}
+
+a:active {
+  text-decoration: none !important;
+}
+   </style>
+   <title>DoiNk Shippers</title>
+
+   <!-- Font -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+      <a class="navbar-brand" href="#" style="font-family: 'Roboto Slab', serif;">DoiNk Shippers</a>
+    
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="signup.html">Signup</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+
+    <section class="restaurants">
+        <h3 class="font-class" >Orders Available</h3><br><br>
+        
+        
+        <div class="card mb-3 outlet-cards" style="max-width: 540px;">
+           <div class="row no-gutters full-store-card">
+             <style>
+                .card{
+                    font-size: 20px;
+                    line-height: 15px;
+                    background-color: rgb(49, 48, 48);
+                    border-radius: 20px;
+                }
+
+                h1{
+                    background-color: black;
+                    border-radius: 10px;
+                    padding-left: 4rem;
+                    padding-top: 0.2rem;
+                    padding-bottom: 0.4rem;
+                }
+
+                .details{
+                    background-color: black;
+                    padding: 0.5rem;
+                    color: rgb(177, 181, 185);
+                    border-radius: 20px;
+                }
+
+                .bn54{
+                    color: aliceblue;
+                    padding-left: 0.25rem;
+                    width: 100px;
+                    margin-top: 1rem;
+                    border-radius: 15px;
+                }
+
+                .card-img{
+                    padding-right:0.8rem;
+                    padding-top: 1.5rem;
+                    height: 260px;
+                    border-radius: 25px;
+                }
+             </style>
+             <div class="col-8">
+               <div class="card-body card">
+                 <h1 class="card-title">Enzo</h1>
+                 <div class="details">
+                 <p class="card-text">Chicken Briyani</p>
+                 <p class="card-text"><small >Quantity: 1</small></p>
+                 <p class="card-text"><small >Phone no: 1234567890</small></p>
+                 <p class="card-text"><small >Total price: 200Rs</small></p>
+                 <h6>Destination</h6>
+                 <p class="card-text"><small >L block</small> </p>
+                 <p class="card-text"><small >Room: 1006</small></p>
+                </div>
+                 <!-- <p class="card-text">this mens block store has a variety of items including daily use products.</p> -->               
+               </div>
+             </div>
+             <div class="col-4 store-image-space">
+                <div>
+                <img src="./Chicken-Biryani-png.jpg" class="card-img" alt="...">
+                
+            
+               
+                <a href="{% url 'agentotppage' %}">
+                    <button class="bn54" >Accept</button>
+                  </a>
+
+            </div>
+
+           </div>
+           
+         </div>
+         </div>
+
+        
+
+          </div>
+   
+</body>
+</html>

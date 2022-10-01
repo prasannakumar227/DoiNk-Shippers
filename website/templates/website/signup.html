@@ -424,43 +424,29 @@ function CheckForNewActiveImageBasedOnScroll() {
     <div class="lbr">
         <div class="lname">
             <h3>Sign up to Continue!</h3>
-            <form action="index.html">
-                <br>
+            
+            <form action = "{% url 'signuppage' %}" method="POST">
+                 <br>
                 <div class="container1">
                 <label for="name"> Full Name:</label><br>
-                <input type="text" Full Name="name" placeholder="Full Name" required><br>
-                <label for="regno">Registration No:</label><br>
-                <input type="text" Registration No="regno" placeholder="Eg: 20BXY0000" required><br>
+                <input type="text" name="name" placeholder="Full Name" required><br>
+                
                 <label for="pass">Password:</label><br>
-                <input type="password" Password="pass" placeholder="password" required><br>
-                <label for="No">Phone No:</label><br>
-                <input type="number" Phone No:="No" placeholder="Eg: 999999XXXX" pattern="[0-9]{10}" ><br>
+                <input type="password" name="pass" placeholder="password" required><br>
+                <label for="phoneno">Phone No:</label><br>
+                <input type="number" name="phoneno" placeholder="Eg: 999999XXXX" pattern="[0-9]{10}" ><br>
 
                 <label for="email">College Mail:</label><br>
                 <input type="email" name="email" placeholder="xyz@vitstudent.ac.in" required><br>
                 <!-- <label for="dob">Date of Birth</label><br>
                 <input type="date" DOB="dob"><br> -->
-                <label for="gen">Gender:</label><br>
-                <select name="gen" >
-                    <option value="d" selected disabled style="font-weight: 200;">
-                        <b>Choose an option</b>
-                    </option>
-                    <option value="m">Male</option>
-                    <option value="f">Female</option>
-                    <option value="o">Other</option>
-                </select><br>
+               
                 <label for="blk"> Block: </label><br>
-                <input type="text" Block="blk" placeholder="Eg: L" pattern="[A-Z]{1}"><br>
-                <label for="anx">Annex?:</label><br>
-                <select name="anx">
-                    <option value="d" selected disabled style="font-weight: 200;">
-                        <b>Choose Yes or No </b>
-                    </option>
-                    <option value="y">Yes</option>
-                    <option value="n">No</option>
-                </select><br>
-                <label for="rno">Room No:</label><br>
-                <input type="number" Room No:="No" placeholder="Eg: 10XX" patterns="[0-9]{1-4}"><br>
+                <input type="text" name="blk" placeholder="Eg: L" pattern="[A-Z]{1}"><br>
+                
+                
+                <label for="roomno">Room No:</label><br>
+                <input type="number" name="roomno" placeholder="Eg: 10XX" patterns="[0-9]{1-4}"><br>
                 </div>
                 <div class="container2">
                     <br>

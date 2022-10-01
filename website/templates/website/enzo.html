@@ -4,21 +4,134 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!--     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="enzo.css"> -->
-    <style>
-      body{
+ 
+    
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+
+
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+   <title>DoiNk Shippers</title>
+
+   <!-- Font -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@800&display=swap" rel="stylesheet">
+
+
+   <title>Enzo</title>
+<style>
+  body{
+   background-color:black !important;
+   height: 100%;
+   color: white !important;
+}
+.navbar{
+  position: sticky !important;
+  background-color: rgba(0, 0, 0, 0.75) !important;
+  top: 0;
+  z-index: 50;
+}
+.carouselSection {
+   display: flex;
+   justify-content: center;
+ }
+ 
+  .container {
+   width: 100vw;
+   overflow-x: scroll;
+   scroll-behavior: smooth;
+   overflow-y: hidden;
+   scroll-snap-type: x mandatory;
+ } 
+ 
+ .wrapper {
+   width: max-content;
+/*    height: 95vh;
+ */   display: flex;
+   align-items: center;
+ }
+ 
+ .img {
+   margin: 10px;
+   border-radius: 8px;
+   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+   max-width: 80vw;
+   /*   float: left; */
+   scroll-snap-align: center;
+ /*   scroll-snap-stop: normal; */
+ }
+
+ .outlet-cards{
+   background-color: rgb(45, 45, 45) !important;
+   border-radius: 20px;
+   margin: 5px 15px;
+ }
+
+.store-image-space{
+  /*  height: 100% !important; */
+   object-fit: fill !important;
+}
+.card-img{
+   border-radius: 20px;
+   height: 100%;
+}
+
+.font-class{
+   /* margin: 15px 10px; */
+   margin-left: 0.5rem;
+   margin-bottom: 1rem;
+   justify-content: center;
+   padding-left: 10px;
+}
+
+.offers-carousel::-webkit-scrollbar {
+   display: none;
+}
+
+a{
+   color: white !important;
+}
+a:link {
+   text-decoration: none !important;
+ }
+ 
+ a:visited {
+   text-decoration: none!important;
+ }
+ 
+ a:hover {
+   text-decoration: none !important;
+   
+ }
+ 
+ a:active {
+   text-decoration: none !important;
+ }
+</style>
+
+   <style>
+    body{
     height: 100vh;
 }
 
 .card-img{
     margin-top: 1rem;
-    padding-right: 0.5rem;
-    width: 40px;
-    height: 140px;
-    margin-bottom: 0.5rem;
+    padding-right: 1rem; 
+    width: 130px;
+    height: 170px;
+    /* margin-bottom: 0.5rem; */
 }
 
+
+.full-store-card{
+    margin-bottom: 1rem;
+}
 footer{
     position: fixed;
     bottom:50px;
@@ -99,102 +212,7 @@ footer{
       transform: translate3d(0, 0, 0) translateZ(0);
     }
   }
-
-  body{
-   background-color:black !important;
-   height: 100%;
-   color: white !important;
-}
-
-
-.carouselSection {
-   display: flex;
-   justify-content: center;
- }
- 
-  .container {
-   width: 100vw;
-   overflow-x: scroll;
-   scroll-behavior: smooth;
-   overflow-y: hidden;
-   scroll-snap-type: x mandatory;
- } 
- 
- .wrapper {
-   width: max-content;
-/*    height: 95vh;
- */   display: flex;
-   align-items: center;
- }
- 
- .img {
-   margin: 10px;
-   border-radius: 8px;
-   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
-   max-width: 80vw;
-   /*   float: left; */
-   scroll-snap-align: center;
- /*   scroll-snap-stop: normal; */
- }
-
- .outlet-cards{
-   background-color: rgb(45, 45, 45) !important;
-   border-radius: 20px;
-   margin: 5px 15px;
- }
-
-.store-image-space{
-  /*  height: 100% !important; */
-   object-fit: fill !important;
-}
-.card-img{
-   border-radius: 20px;
-   height: 100%;
-}
-
-.font-class{
-   margin: 15px 15px;
-}
-
-.offers-carousel::-webkit-scrollbar {
-   display: none;
-}
-
-a{
-   color: white !important;
-}
-a:link {
-   text-decoration: none !important;
- }
- 
- a:visited {
-   text-decoration: none!important;
- }
- 
- a:hover {
-   text-decoration: none !important;
-   
- }
- 
- a:active {
-   text-decoration: none !important;
- }
-    </style>
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-   <title>DoiNk Shippers</title>
-
-   <!-- Font -->
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@800&display=swap" rel="stylesheet">
-
-
-   <title>Enzo</title>
+   </style>
    <script>
     //using a polyfill for safary to have smooth scroling behavior. for more info: https://github.com/iamdustan/smoothscroll
 // using jQuery
@@ -310,11 +328,9 @@ if (
             <ul class="navbar-nav mr-auto">
     
               <li class="nav-item">
-                <a class="nav-link" href="#">Login</a>
+                <a class="nav-link" href="#">your Orders</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Signup</a>
-              </li>
+
     
     
             </ul>
@@ -322,62 +338,168 @@ if (
         </nav><br><br>
 
         <section class="restaurants">
-            <h3 class="font-class" >Menu Card</h3>
+            <h3 class="font-class" >Menu Card for Enzo</h3>
             
-            <a href="enzo.html">
+
+            {% for obj in menudetails %}
+            <!--  -->
             <div class="card mb-3 outlet-cards" style="max-width: 540px;">
                <div class="row no-gutters full-store-card">
                  
                  <div class="col-8">
                    <div class="card-body">
-                     <h5 class="card-title">Chicken briyani</h5>
-                     <p class="card-text"><small class="text-muted">Rs 200</small></p>
+                     <h5 class="card-title">{{obj.item}}</h5>
+                     <p>Price</p>
+                     <p class="card-text" id="price"><small >200</small></p>
+                     <!-- <script>
+                        let count = 0;
+                        function(){}
+                        document.getElementById("counting").innerText = count;
+                        document.getElementById("price");
+                        let x = price*count;
+                        document.getElementById("price").innerHTML=x;
+                        
+
+                     </script> -->
                      <!-- <p class="card-text">this mens block store has a variety of items including daily use products.</p> -->
-                     <p class="card-text"><small class="text-muted">Non-veg</small></p>
-                     <!-- <center>
-                        
-                        <button onclick="increment()">+</button>
-                        <input id=demoInput type=number min=1 max=100>
-                        
-                        <button onclick="decrement()">-</button>
-                        <script>
-                        var data = 0;
-  
-  //printing default value of data that is 0 in h2 tag
-  document.getElementById("demoInput").innerText = data;
-    
-  //creation of increment function
-  function increment() {
-      data = data + 1;
-      document.getElementById("demoInput").innerText = data;
-  }
-  //creation of decrement function
-  function decrement() {
-      data = data - 1;
-      document.getElementById("demoInput").innerText = data;
-  }
-                        </script>
-                        </center> -->
+                     <p class="card-text"><small >{{obj.category}}</small></p>
+                     
+                     <div class="counter_conatiner">
+                        <div class="counter">
+                        <button class="increment" onclick="decrement()" id="subtract">-</button>
+                        <span id="counting">0</span>
+                        <button class="increment" onclick="increment()" id="add">+</button>
+                      </div>
+                    </div>
+                    
+                   
                    </div>
                  </div>
                  <div class="col-4 store-image-space">
                     <div>
-                    <img src="./Yellow Black Modern Food Instagram Story.png" class="card-img" alt="...">
+                    <img src="{{ obj.image.url }}" class="card-img" alt="...">
+                    <div class="counter">
+<style>
+
+.counter_conatiner{
+    /* background-color: rgb(94, 85, 85); */
+    height: 10px;
+    justify-content: space-evenly;
+}
+
+.increment{
+    color: rgb(64, 255, 6);
+    background-color: rgb(29, 28, 28);
+    border: none;
+    font-size: 20px;
+
+}
+
+.counter{
+    background-color: rgb(29, 28, 28);
+    border-radius: 5px;
+    margin-right: 8.8rem;
+    display:flex !important;
+    padding-top: 0.1rem;
+    padding-left: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+
+                            /* *,
+*::after,
+*::before {
+  padding: 0px;
+  margin: 0px;
+  font-family: inherit;
+}
+html,
+body {
+  height: 100vh;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: aliceblue;
+}
+.counter_conatiner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  margin-top: 1rem;
+}
+span {
+  font-size: 3rem;
+  background-color: #00bb00;
+  padding: 2px 12px;
+  margin-left: 16px;
+  margin-right: 16px;
+  border-radius: 4px;
+  color: #fff;
+}
+button {
+  font-size: 3rem;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0px;
+} */
+
+
+</style>
+<script>
+    
+            //initialising a variable name data
+            var data = 0;
+  
+            //printing default value of data that is 0 in h2 tag
+            document.getElementById("counting").innerText = data;
+  
+            //creation of increment function
+            function increment() {
+                data = data + 1;
+                document.getElementById("counting").innerText = data;
+            }
+            //creation of decrement function
+            function decrement() {
+                if(data>0){
+                data = data - 1;
+                document.getElementById("counting").innerText = data;
+                }
+                else{
+                    data=0;
+                }
+            }
+        
+</script>
+         
+                     </div>
                 </div>
-                  </div>
+
                </div>
+               
              </div>
-            </a>
+             </div>
+
+             {% endfor %}
+             <!--  -->
+
+            
+
             
 
             </section>
-
-            <footer >
-                <a href="yourorder.html">
-                <button type=submit class="bn54">
-                    <span class="bn54span">Order now!</span>
-                </button>
-                </a>
-            </footer>
-</body>
+            <form action="{% url 'yourorderspage' %}">
+              <button type=submit class="bn54">
+                <span class="bn54span">Order now!</span>
+              </button>
+            </a>
+          </form>
+        </body>
+              
 </html>

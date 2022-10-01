@@ -16,8 +16,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from . import views
+
 urlpatterns = [
     path('',views.index,name="index"),
     path('login',views.loginpage, name="loginpage"),
+    path('signup/',views.signuppage, name="signuppage"),
+#    path('home/',views.homepage, name="homepage"),
+    path('yourorder/',views.yourorderspage, name="yourorderspage"),
+    path('agentview/',views.agentOrderView, name="agentorderview"),
+    path('agentotp/',views.agentotp, name="agentotppage"),
+    path('agentotpsuccess/',views.agentotpsuccess, name="agentotpsuccess"),
+    path('menupage/',views.menupage, name="menupage"),
    
 ] 
