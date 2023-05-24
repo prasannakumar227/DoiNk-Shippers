@@ -64,8 +64,11 @@ Open your web browser and visit http://localhost:8000 to access the DoiNK Shippe
 ## Project Structure
 
 `index.html` - Home page of the app.
+
 `settings.py` - Django settings file.
+
 `manage.py` - Django management script.
+
 `DoiNKShippers/` - Django app directory containing the main project code.
 
 ## Configuration
