@@ -80,7 +80,7 @@ DoiNK Shippers uses a temporary link for Stripe API and Sendinblue API for OTP-b
 We welcome contributions from everyone! If you find any issues or have suggestions for improvement, please fork the repository and submit a pull request. 🚀
 
 ## Contact
-If you have any questions or inquiries, please contact us at doinkshippers@example.com. ✉️
+If you have any questions or inquiries, please contact us at doinkshippers@gmail.com. ✉️
 
 #### With Love❤️ and Caffeine☕️ from - highOnCaffeine! ❤️☕️
 
