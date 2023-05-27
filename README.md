@@ -27,7 +27,7 @@ pip install pipenv
 ### Clone the repository
 
 ```bash
-git clone https://github.com/S/DoiNk-Shippers.git
+git clone https://github.com/Sriram247/DoiNk-Shippers.git
 ```
 
 ### Set up the virtual environment
