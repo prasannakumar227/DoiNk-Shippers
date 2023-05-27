@@ -1,6 +1,6 @@
 # DoiNK Shippers - Food Delivery App
 
-DoiNK Shippers is a food delivery app developed by students, for students. It aims to provide a convenient and efficient way for students to order food from local restaurants and have it delivered to their doorstep.
+DoiNK Shippers is a food delivery app developed by students, for students. It aims to provide a convenient and efficient way for students to order food from local restaurants and have it delivered by the students to their doorstep.
 
 ## Features
 
@@ -9,6 +9,7 @@ DoiNK Shippers is a food delivery app developed by students, for students. It ai
 - Secure OTP-based order verification through email using Sendinblue API.
 - User-friendly interface for easy navigation and ordering.
 - Developed using the Django framework.
+
 
 ## Installation
 
